@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css">
+    <title>Services</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Keerthish Kumar</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <section id="filters">
+        <h2>Filter Services</h2>
+        <div class="filter-container">
+            <button class="filter-button" data-category="all">All</button>
+            <button class="filter-button" data-category="web">Web Development</button>
+            <button class="filter-button" data-category="design">Design</button>
+            <button class="filter-button" data-category="marketing">Marketing</button>
+            <label for="price-range">Price Range:</label>
+            <input type="range" id="price-range" min="0" max="1000" value="500">
+            <button id="filter-button">Filter</button>
+        </div>
+    </section>
+    <section id="services-list">
+        <h2>Available Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Description of web development service.</p>
+                    <button class="payment-button">Pay Now</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Description of design service.</p>
+                    <button class="payment-button">Pay Now</button>
+                </div>
+            </div>
+            <!-- More services can be added here -->
+        </div>
+    </section>
+    <script src="services.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/services.css">
+    <title>Services</title>
+</head>
+<body>
+    <header>
+        <h1>Services Offered</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Our Services</h2>
+            <!-- List of services with pricing and options -->
+        </section>
+    </main>
+    <script src="js/services.js"></script>
+</body>
+</html>

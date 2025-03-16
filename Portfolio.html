@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthi Kumar - Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .skill-level-bar {
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+        .skill-level-90 {
+            width: 90%;
+            background-color: #4CAF50;
+        }
+        .skill-level-85 {
+            width: 85%;
+            background-color: #4CAF50;
+        }
+        .skill-level-75 {
+            width: 75%;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Keerthish Kumar</div>
+        <ul class="nav-links">
+            <li><a href="#home" title="Home">Home</a></li>
+            <li><a href="#about" title="About">About</a></li>
+            <li><a href="#services" title="Services">Services</a></li>
+            <li><a href="#projects" title="Projects">Projects</a></li>
+            <li><a href="#contact" title="Contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero animate-fade-in">
+        <div class="hero-content">
+            <div class="hero-background"></div>
+            <div class="hero-overlay">
+                <div class="hero-text-container">
+                    <div class="hero-image-wrapper">
+                        <img src="profile-hero.jpg" alt="Keerthish Kumar" class="hero-image">
+                        <div class="hero-image-border"></div>
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="hero-title typing-effect">Keerthish Kumar</h1>
+                        <div class="hero-skills">
+                            <span class="skill-tag">Freelance Graphic Designer</span>
+                            <span class="skill-tag">Financial Advisor</span>
+                            <span class="skill-tag">Entrepreneur</span>
+                        </div>
+                        <div class="hero-social-links">
+                            <a href="#" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary" title="Hire Me">Hire Me</a>
+                            <a href="#services" class="btn btn-secondary" title="My Services">My Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about animate-fade-in">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="section-subtitle">My Professional Journey</div>
+        </div>
+        <div class="about-content">
+            <div class="about-text-container">
+                <div class="about-profile-image">
+                    <img src="profile-about.jpg" alt="Keerthish Kumar Professional Portrait">
+                    <div class="profile-image-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <p>I'm a passionate designer and entrepreneur with a keen eye for creating impactful digital experiences. My journey combines creativity, technology, and strategic thinking to deliver innovative solutions.</p>
+                    <div class="experience-timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Senior UX Designer</h3>
+                                <p>Tech Innovations Inc. | 2020 - Present</p>
+                                <span class="timeline-description">Leading design strategy and creating user-centric digital solutions.</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Freelance Creative Consultant</h3>
+                                <p>Independent | 2018 - 2020</p>
+                                <span class="timeline-description">Collaborated with diverse clients to transform their digital presence.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="achievements-container">
+                <div class="achievements">
+                    <h3>Key Achievements</h3>
+                    <div class="achievement-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-details">
+                                <h4>Design Excellence</h4>
+                                <p>Award Winner 2022</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🚀</div>
+                            <div class="achievement-details">
+                                <h4>Digital Products</h4>
+                                <p>50+ Successful Launches</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">📈</div>
+                            <div class="achievement-details">
+                                <h4>Client Revenue</h4>
+                                <p>$500K+ Generated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills animate-fade-in">
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <div class="section-subtitle">Professional Expertise</div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon-wrapper">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-progress-container">
+                            <div class="skill-progress">
+                                <div class="skill-level-bar ui-ux skill-level-90"></div>
+                            </div>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-description">
+                            <p>Crafting intuitive interfaces and user-centered design solutions that enhance digital experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-progress-container">
+                            <div class="skill-progress">
+                                <div class="skill-level-bar web-dev skill-level-85"></div>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-description">
+                            <p>Building responsive, performant web applications using modern technologies and best practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-progress-container">
+                            <div class="skill-progress">
+                                <div class="skill-level-bar marketing skill-level-75"></div>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-description">
+                            <p>Developing strategic marketing campaigns to drive engagement and business growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services animate-fade-in">
+        <div class="section-header">
+            <h2>My Services</h2>
+            <div class="section-subtitle">Comprehensive Digital Solutions</div>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-copyright"></i>
+                        </div>
+                        <h3>Logo & Branding Plan</h3>
+                        <p>Professional branding solutions to elevate your business identity.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Affordable Logo Design</li>
+                                <li>Business Card Creation</li>
+                                <li>Social Media Kits</li>
+                                <li>Brand Identity Package</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$800</span>
+                                <a href="#contact" class="btn btn-service" title="Book Logo & Branding Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Affordable & High-Quality – Get a professional logo without breaking the bank.</li>
+                            <li>✅ Customized to Your Brand – Choose from simple text-based logos to premium designs.</li>
+                            <li>✅ Complete Branding Package – Get everything from business cards to social media kits in one go.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Graphic & Print Design Plan</h3>
+                        <p>Creative design solutions for print and digital media.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Custom Banner Design</li>
+                                <li>Book Cover Creation</li>
+                                <li>Packaging Design</li>
+                                <li>High-Resolution Prints</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$1100</span>
+                                <a href="#contact" class="btn btn-service" title="Book Graphic & Print Design Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Creative & Unique Designs – Stand out with custom banners, book covers, and packaging.</li>
+                            <li>✅ Tailored to Your Needs – Perfect for businesses, authors, and brands.</li>
+                            <li>✅ Print-Ready & High Resolution – Get files that are ready for both digital and print use.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Photo Editing</h3>
+                        <p>Professional photo editing and retouching services.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Background Changes</li>
+                                <li>Color Correction</li>
+                                <li>Retouching</li>
+                                <li>Creative Manipulation</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$500</span>
+                                <a href="#contact" class="btn btn-service" title="Book Photo Editing Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ High-Quality Edits – From background changes to color corrections, we make your photos look perfect.</li>
+                            <li>✅ Advanced Photo Manipulation – Get creative edits and retouching for professional results.</li>
+                            <li>✅ Fast & Affordable – Quick delivery without compromising quality.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3>Basic Video Editing Plan</h3>
+                        <p>Affordable video editing for social media and personal content.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Gaming Video Editing</li>
+                                <li>Social Media Clips</li>
+                                <li>Basic Transitions</li>
+                                <li>Subtitle Addition</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$300</span>
+                                <a href="#contact" class="btn btn-service" title="Book Basic Video Editing Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Budget-Friendly Editing – Perfect for gaming videos, short clips, and social media content.</li>
+                            <li>✅ Smooth Transitions & Effects – We enhance your videos with professional touches.</li>
+                            <li>✅ Customizable Options – Add subtitles, animations, and more based on your needs.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Professional Video Editing Plan</h3>
+                        <p>High-end video editing for professional and creative projects.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Wedding Video Editing</li>
+                                <li>Tutorial Production</li>
+                                <li>Color Grading</li>
+                                <li>Advanced Effects</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$1500</span>
+                                <a href="#contact" class="btn btn-service" title="Book Professional Video Editing Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Cinematic Touch – Perfect for weddings, tutorials, and music videos.</li>
+                            <li>✅ Advanced Editing Techniques – Includes color grading, effects, and smooth transitions.</li>
+                            <li>✅ High-Quality Output – We ensure your videos are crisp and engaging.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Website Design Plan</h3>
+                        <p>Custom web design for blogs, portfolios, and e-commerce.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Responsive Design</li>
+                                <li>Custom Layout</li>
+                                <li>SEO Optimization</li>
+                                <li>Mobile-Friendly</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$2500</span>
+                                <a href="#contact" class="btn btn-service" title="Book Website Design Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ User-Friendly & Responsive – Websites that look great on all devices.</li>
+                            <li>✅ Custom & Professional Design – Tailored for blogs, portfolios, and e-commerce.</li>
+                            <li>✅ SEO-Optimized – Get a site that's ready to rank on Google.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>SEO & Blogging Plan</h3>
+                        <p>Comprehensive digital marketing and content strategy.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Blog Traffic Boost</li>
+                                <li>AdSense Optimization</li>
+                                <li>Content Writing</li>
+                                <li>Ranking Improvement</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$1200</span>
+                                <a href="#contact" class="btn btn-service" title="Book SEO & Blogging Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Boost Your Website Traffic – Improve your blog's ranking and visibility.</li>
+                            <li>✅ AdSense-Ready Setup – Get a fully optimized blog that can start earning.</li>
+                            <li>✅ Consistent Content Writing – Monthly blog writing services available.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Wedding Album Plan</h3>
+                        <p>Professional wedding album design and printing.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Elegant Layouts</li>
+                                <li>Custom Page Designs</li>
+                                <li>High-Quality Printing</li>
+                                <li>Memory Preservation</li>
+                            </ul>
+                        </div>
+                        <div class="service-actions">
+                            <div class="service-pricing">
+                                <span class="price">$900</span>
+                                <a href="#contact" class="btn btn-service" title="Book Wedding Album Plan">Book Now</a>
+                            </div>
+                            <button class="btn btn-why-choose">Why Choose Us?</button>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>✅ Elegant & Professional Layouts – Preserve your memories beautifully.</li>
+                            <li>✅ Custom Page Designs – Get unique layouts for each page.</li>
+                            <li>✅ High-Quality Printing – Ready for both digital and print albums.</li>
+                        </ul>
+                        <button class="btn btn-back">Back to Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects animate-fade-in">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <div class="section-subtitle">Innovative Digital Solutions</div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project1.jpg" alt="E-commerce Platform">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <p>Full-stack e-commerce solution with modern design and seamless user experience.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>50K+ Users</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>10K+ Sales</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View E-commerce Platform Case Study">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project2.jpg" alt="Mobile App Redesign">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>Swift</span>
+                            <span>Kotlin</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Mobile App Redesign</h3>
+                    <p>Comprehensive UX/UI redesign for a fitness tracking mobile application.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>100K+ Downloads</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 Rating</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View Mobile App Redesign Case Study">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project3.jpg" alt="Brand Identity">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>Branding</span>
+                            <span>Visual Identity</span>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Brand Identity</h3>
+                    <p>Complete branding and visual identity for a tech startup.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-rocket"></i>
+                            <span>Startup Launched</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-award"></i>
+                            <span>Design Award</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View Brand Identity Case Study">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project4.jpg" alt="AI Dashboard">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>React</span>
+                            <span>AI/ML</span>
+                            <span>Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>AI Analytics Dashboard</h3>
+                    <p>Advanced data visualization platform with machine learning insights.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Real-time Analytics</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-database"></i>
+                            <span>Scalable Solution</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View AI Dashboard Case Study">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project5.jpg" alt="Social Media Platform">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Social Media Platform</h3>
+                    <p>Innovative social networking platform with real-time communication features.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>25K+ Users</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-comments"></i>
+                            <span>Live Chat</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View Social Media Platform Case Study">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="project6.jpg" alt="IoT Smart Home">
+                    <div class="project-overlay">
+                        <div class="project-technologies">
+                            <span>IoT</span>
+                            <span>React Native</span>
+                            <span>Cloud Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>IoT Smart Home App</h3>
+                    <p>Comprehensive smart home management application with IoT device integration.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-home"></i>
+                            <span>Smart Home Control</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Cross-Platform</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-project" title="View IoT Smart Home App Case Study">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials animate-fade-in">
+        <div class="section-header">
+            <h2>Client Testimonials</h2>
+            <p>What our clients say about our work</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="quote-icon">"</i>
+                    <p>Keerthi transformed our digital presence with an incredible design strategy that not only elevated our brand but also significantly improved our user engagement.</p>
+                    <i class="quote-icon">"</i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image-wrapper">
+                        <img src="client1.jpg" alt="Sarah Johnson" class="author-image">
+                    </div>
+                    <div class="author-details">
+                        <h4>Sarah Johnson</h4>
+                        <span>CEO, Tech Innovations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="quote-icon">"</i>
+                    <p>Professional, creative, and delivers results beyond expectations. Keerthi's innovative approach has been a game-changer for our startup's digital strategy.</p>
+                    <i class="quote-icon">"</i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image-wrapper">
+                        <img src="client2.jpg" alt="Michael Chen" class="author-image">
+                    </div>
+                    <div class="author-details">
+                        <h4>Michael Chen</h4>
+                        <span>Startup Founder</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="quote-icon">"</i>
+                    <p>Working with Keerthi was an absolute pleasure. Their attention to detail and ability to translate our vision into a stunning digital experience was remarkable.</p>
+                    <i class="quote-icon">"</i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image-wrapper">
+                        <img src="client3.jpg" alt="Emily Rodriguez" class="author-image">
+                    </div>
+                    <div class="author-details">
+                        <h4>Emily Rodriguez</h4>
+                        <span>Marketing Director</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-fade-in">
+        <div class="contact-background"></div>
+        <div class="section-header">
+            <h2>Book a Consultation</h2>
+            <p>Let's turn your digital vision into reality</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Full Name" required>
+                            <i class="input-icon fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email Address" required>
+                            <i class="input-icon fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <div class="select-wrapper">
+                            <select id="service" required title="Select service for consultation">
+                                <option value="">Select Service</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="consulting">Strategy Consulting</option>
+                            </select>
+                            <i class="input-icon fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell me about your project" required></textarea>
+                        <i class="input-icon fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary" title="Send Message">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="contact-info-content">
+                    <h3>Let's Connect</h3>
+                    <p>Ready to elevate your digital presence? I'm just a message away.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@keerthikumar.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/keerthikumar" class="social-icon" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/keerthikumar" class="social-icon" title="Twitter Profile">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/keerthikumar" class="social-icon" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>Keerthish Kumar</span>
+            </div>
+            <div class="footer-main">
+                <div class="footer-navigation">
+                    <h4>Quick Links</h4>
+                    <div class="footer-nav-columns">
+                        <div>
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#services">Services</a>
+                        </div>
+                        <div>
+                            <a href="#portfolio">Portfolio</a>
+                            <a href="#testimonials">Testimonials</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p>hello@keerthikumar.com</p>
+                    <p>+1 (555) 123-4567</p>
+                    <div class="footer-social-links">
+                        <a href="https://linkedin.com/in/keerthikumar" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/keerthikumar" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/keerthikumar" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2025 Keerthi Kumar. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#" title="Privacy Policy">Privacy Policy</a>
+                    <a href="#" title="Terms of Service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+</body>
+</html>

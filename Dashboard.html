@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthi Kumar - Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            height: 100vh;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .sidebar {
+            background: linear-gradient(135deg, #00ffe1 0%, #007bff 100%);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            width: 250px;
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar-nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar-nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 20px;
+        }
+
+        .logout {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout:hover {
+            background-color: #3e8e41;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .top-bar {
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .notifications {
+            position: relative;
+        }
+
+        .notification-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 50%;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #00ffe1 0%, #007bff 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.2em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chart-section {
+            margin-top: 20px;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-tags {
+            margin-top: 10px;
+        }
+
+        .project-tags span {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .skill-form {
+            margin-top: 20px;
+        }
+
+        .skill-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .skill-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .skill-form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .skill-form button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+        }
+
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .analytics-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-section {
+            margin-top: 20px;
+        }
+
+        .setting-item {
+            margin-bottom: 20px;
+        }
+
+        .setting-item label {
+            margin-right: 10px;
+        }
+
+        .setting-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .dashboard-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dashboard-button:hover {
+            background-color: #3e8e41;
+        }
+
+        .dashboard-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-card-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .dashboard-card-body {
+            padding: 20px;
+        }
+
+        .profile-section {
+            margin-top: 20px;
+        }
+
+        .profile-image-upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-details {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Portfolio</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-tab="overview">
+                        <i class="fas fa-home"></i>
+                        <span>Overview</span>
+                    </li>
+                    <li data-tab="projects">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </li>
+                    <li data-tab="skills">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Skills</span>
+                    </li>
+                    <li data-tab="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </li>
+                    <li data-tab="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </li>
+                    <li data-tab="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="logout btn btn-secondary">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <h1 id="page-title">Overview</h1>
+                <div class="top-bar-actions">
+                    <div class="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tab Contents -->
+            <div class="tab-content active" id="overview">
+                <section class="quick-stats">
+                    <div class="card" id="traffic">
+                        <h3>Website Traffic</h3>
+                        <p class="stat-value">1,200 visits</p>
+                        <small>+12% from last month</small>
+                    </div>
+                    <div class="card" id="leads">
+                        <h3>New Leads</h3>
+                        <p class="stat-value">300 leads</p>
+                        <small>+25% from last month</small>
+                    </div>
+                    <div class="card" id="appointments">
+                        <h3>Appointments</h3>
+                        <p class="stat-value">50 meetings</p>
+                        <small>+8% from last month</small>
+                    </div>
+                </section>
+
+                <section class="chart-section">
+                    <div class="chart-container">
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-content" id="projects">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio showcasing skills and projects</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with payment integration</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="skills">
+                <h2>Skills Management</h2>
+                <form id="add-skill-form" class="skill-form">
+                    <input type="text" placeholder="Skill Name" required>
+                    <select required>
+                        <option value="">Proficiency</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+                    <button type="submit">Add Skill</button>
+                </form>
+                <ul id="skills-list" class="skills-list"></ul>
+            </div>
+
+            <div class="tab-content" id="analytics">
+                <h2>Performance Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Skill Progression</h3>
+                        <canvas id="skillProgressChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Project Impact</h3>
+                        <canvas id="projectImpactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="settings">
+                <h2>Dashboard Settings</h2>
+                <div class="settings-section">
+                    <h3>Preferences</h3>
+                    <div class="setting-item">
+                        <label>Dark Mode</label>
+                        <input type="checkbox" id="dark-mode-toggle">
+                    </div>
+                    <div class="setting-item">
+                        <label>Notifications</label>
+                        <input type="checkbox" id="notifications-toggle">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="profile">
+                <div class="profile-section">
+                    <h2>Profile Settings</h2>
+                    <div class="profile-image-upload">
+                        <img id="profile-preview" src="profile-hero.jpg" alt="Profile Image" class="profile-image">
+                        <input type="file" id="profile-upload" accept="image/*" class="profile-upload-input">
+                        <button id="upload-btn" class="btn btn-primary">Upload Profile Picture</button>
+                    </div>
+                    <div class="profile-details">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" value="Keerthish Kumar">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="keerthish@example.com">
+                        <button id="save-profile" class="btn btn-secondary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Dashboard.js"></script>
+</body>
+</html>
