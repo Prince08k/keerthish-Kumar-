@@ -81,36 +81,49 @@ document.addEventListener('DOMContentLoaded', () => {
     
     actionCards.forEach(card => {
         card.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
+            if (card.classList.contains('about')) {
+                window.location.href = 'about.html';
+            } else {
+                e.preventDefault(); // Prevent default link behavior
             
-            let key = '';
-            if (card.classList.contains('portfolio')) key = 'portfolio';
-            else if (card.classList.contains('blog')) key = 'blog';
-            else if (card.classList.contains('github')) key = 'github';
-            else if (card.classList.contains('linkedin')) key = 'linkedin';
-            else if (card.classList.contains('twitter')) key = 'twitter';
-            else if (card.classList.contains('instagram')) key = 'instagram';
-            else if (card.classList.contains('youtube')) key = 'youtube';
-            else if (card.classList.contains('primary-cta')) key = 'consultation';
+                let key = '';
+                if (card.classList.contains('portfolio')) key = 'portfolio';
+                else if (card.classList.contains('blog')) key = 'blog';
+                else if (card.classList.contains('github')) key = 'github';
+                else if (card.classList.contains('linkedin')) key = 'linkedin';
+                else if (card.classList.contains('twitter')) key = 'twitter';
+                else if (card.classList.contains('instagram')) key = 'instagram';
+                else if (card.classList.contains('youtube')) key = 'youtube';
+                else if (card.classList.contains('primary-cta')) key = 'consultation';
 
-            if (key && navigationMap[key]) {
-                // Check if it's a local file or external URL
-                if (navigationMap[key].startsWith('http') || navigationMap[key].startsWith('https')) {
-                    window.open(navigationMap[key], '_blank');
-                } else {
-                    // Local file navigation
-                    window.location.href = navigationMap[key];
+                if (key && navigationMap[key]) {
+                    // Check if it's a local file or external URL
+                    if (navigationMap[key].startsWith('http') || navigationMap[key].startsWith('https')) {
+                        window.open(navigationMap[key], '_blank');
+                    } else {
+                        // Local file navigation
+                        window.location.href = navigationMap[key];
+                    }
                 }
             }
-        });
 
-        // Add hover sound effect
-        card.addEventListener('mouseenter', () => {
+            // Add hover sound effect
             const hoverSound = new Audio('hover-sound.mp3');
             hoverSound.volume = 0.2;
             hoverSound.play().catch(error => {
                 console.log('Audio play failed:', error);
             });
+        });
+    });
+
+    // Dropdown functionality for My Services button
+    document.querySelectorAll('.action-card.services').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            const submenu = card.nextElementSibling; // Get the submenu
+            if (submenu) {
+                submenu.classList.toggle('d-block'); // Toggle visibility
+            }
         });
     });
 

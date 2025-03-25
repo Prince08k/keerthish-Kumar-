@@ -138,6 +138,38 @@ body {
     margin-right: 0.5rem;
 }
 
+.submenu {
+    display: none; /* Hide submenu by default */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Position submenu absolutely */
+    background: rgba(255, 255, 255, 0.95); /* Slightly more opaque background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.submenu li {
+    padding: 10px 15px; /* Padding for submenu items */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.submenu a {
+    color: #333; /* Change text color */
+    text-decoration: none;
+    display: block;
+}
+
+.submenu a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Highlight on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+li.active .submenu {
+    display: block; /* Show submenu when parent is active */
+}
+
 /* Main Content */
 .main-content {
     flex: 1;
@@ -354,6 +386,44 @@ body {
 
 .dashboard-button:hover {
     background: var(--gradient-secondary);
+}
+
+.upload-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.upload-input {
+    margin-bottom: 10px;
+}
+
+.upload-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.image-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    display: none; /* Hide initially */
 }
 
 /* Responsive Design */

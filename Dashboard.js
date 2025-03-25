@@ -390,6 +390,64 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize dashboard
     updateDashboardStats();
     createCharts();
+
+    // Toggle submenu visibility
+    document.querySelectorAll('li[data-tab="profile"]').forEach(item => {
+        item.addEventListener('click', () => {
+            const submenu = item.querySelector('.submenu');
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // Ensure submenu functionality is added for Profile menu
+    const profileMenu = document.querySelector('li[data-tab="profile"]');
+    profileMenu.addEventListener('click', function() {
+        const submenu = profileMenu.querySelector('.submenu');
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Link in Bio Image Upload
+    document.getElementById('upload-button').addEventListener('click', function() {
+        const fileInput = document.getElementById('image-upload');
+        const file = fileInput.files[0];
+        const preview = document.getElementById('image-preview');
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.innerHTML = '<img src="' + e.target.result + '" alt="Image Preview" style="max-width: 100%; height: auto;" />';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Show the link in bio options when the button is clicked
+    const linkInBioButton = document.querySelector('a[href="#link-in-bio"]');
+    linkInBioButton.addEventListener('click', function() {
+        const options = document.getElementById('link-in-bio-options');
+        options.style.display = options.style.display === 'none' ? 'block' : 'none';
+    });
+
+    document.getElementById('image-upload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('image-preview');
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Image Preview" style="max-width: 100%; height: auto;">`;
+                preview.style.display = 'block'; // Show the image preview
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = ''; // Clear the preview if no file is selected
+            preview.style.display = 'none'; // Hide the image preview
+        }
+    });
+
+    document.querySelector('.submenu-toggle').addEventListener('click', function() {
+        const section = document.querySelector('.link-in-bio-section');
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    });
 });
 
 // Call the function to update the dashboard on load

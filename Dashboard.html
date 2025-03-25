@@ -314,6 +314,66 @@
         .profile-details {
             margin-top: 20px;
         }
+        
+        .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .submenu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .upload-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .upload-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .upload-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .upload-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .upload-button:hover {
+            background-color: #3e8e41;
+        }
+        
+        .image-preview {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -346,9 +406,26 @@
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
                     </li>
-                    <li data-tab="profile">
+                    <li data-tab="profile" class="active">
                         <i class="fas fa-user"></i>
                         <span>Profile</span>
+                        <ul class="submenu">
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li data-tab="link-in-bio" class="">
+                                <a href="#link-in-bio" class="submenu-toggle">Link in Bio</a>
+                                <div class="link-in-bio-section" style="display: block;">
+                                    <h2>Your Link in Bio</h2>
+                                    <p>Manage your links here.</p>
+                                    <div id="upload-image-section" class="upload-section">
+                                        <h2>Upload Image for Link in Bio</h2>
+                                        <label for="image-upload" class="upload-label">Choose an image:</label>
+                                        <input type="file" id="image-upload" accept="image/*" title="Upload an image for your Link in Bio" class="upload-input">
+                                        <button id="upload-button" class="upload-button">Upload Image</button>
+                                        <div id="image-preview" class="image-preview"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -487,6 +564,17 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" value="keerthish@example.com">
                         <button id="save-profile" class="btn btn-secondary">Save Changes</button>
+                    </div>
+                </div>
+                <div class="link-in-bio-section">
+                    <h2>Your Link in Bio</h2>
+                    <p>Manage your links here.</p>
+                    <div id="upload-image-section" class="upload-section">
+                        <h2>Upload Image for Link in Bio</h2>
+                        <label for="image-upload" class="upload-label">Choose an image:</label>
+                        <input type="file" id="image-upload" accept="image/*" title="Upload an image for your Link in Bio" class="upload-input">
+                        <button id="upload-button" class="upload-button">Upload Image</button>
+                        <div id="image-preview" class="image-preview"></div>
                     </div>
                 </div>
             </div>
